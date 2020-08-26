@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  https-portal:
+    image: steveltn/https-portal:1
+    ports:
+      - '80:80'
+      - '443:443'
+    restart: always
+    environment:
+      DOMAINS: 'matic-mumbai-gsn.creol.io -> http://matic-mumbai-gsn'
+      STAGE: 'production'
+
+  gsn1:
+    image: dmihal/gsn-relay-xdai
+    volumes:
+      - /etc/gsn1-data:/app/data
+    environment:
+      URL: https://matic-mumbai-gsn.creol.io
+      LOCAL_PORT: 80
+      NODE_URL: https://rpc-mumbai.matic.today
+      RELAY_HUB: "0xD216153c06E857cD7f72665E0aF1d7D82172F494"
+      GAS_PRICE_PERCENT: 1
