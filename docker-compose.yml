@@ -8,7 +8,7 @@ services:
       - '443:443'
     restart: always
     environment:
-      DOMAINS: 'matic-mumbai-gsn.creol.io -> http://matic-mumbai-gsn'
+      DOMAINS: 'matic-mumbai-gsn.creol.io -> http://gsn1'
       STAGE: 'production'
 
   gsn1:
