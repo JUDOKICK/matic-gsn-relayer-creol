@@ -52,11 +52,13 @@ The following is comprehensive instructions for setting up a GSN Relayer on Mati
     ```javascript
         0xD216153c06E857cD7f72665E0aF1d7D82172F494
     ```
- 7. Using remix.ethereum.org or your own implementation, compile the RelayHub.sol contract provided here and use the ```stake``` function
+ 7. You will also have to transfer some funds to the Relayer's address so it can pay some txns. Min is 1 ETH i believe.
+   
+ 8. Using remix.ethereum.org or your own implementation, compile the RelayHub.sol contract provided here and use the ```stake``` function
     * You will need to get the Relayer address from the output of the docker container (you can use ```docker logs GSNCONTAINERID``` to get it)
     * Minimum you must stake is 1 ETH / or 1 MATIC and the default delay set is ``604800`` (1 week approx)
     
- 8. Your Relayer at this point should detect that it is in fact registered and begin accepting relays
+ 9. Your Relayer at this point should detect that it is in fact registered and begin accepting relays
  
 ## Running GSN Transactions
 
