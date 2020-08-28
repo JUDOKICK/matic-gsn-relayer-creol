@@ -38,8 +38,7 @@ The following is comprehensive instructions for setting up a GSN Relayer on Mati
                  NODE_URL: https://RPC_NODE_URL_HERE
                  RELAY_HUB: "0xD216153c06E857cD7f72665E0aF1d7D82172F494"
                  GAS_PRICE_PERCENT: 1
-           
-           ```
+    ```
 
 3. Next deploy your forked docker-compose on a docker cloud instance like Jelastic/AWS ECS etc. 
 
@@ -66,4 +65,5 @@ To be able to run GSN capable contracts, your smart contract must have inherited
 Then you will have to deposit funds to the ```RelayHub``` contract for your deployed contracts address.
 
 After this, any function that gets called using GSN relayers will deduct from this balance. 
+
 
